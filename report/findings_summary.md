@@ -1,13 +1,15 @@
-# Extending the Wieferich-prime search frontier for 27 bases to 10^14
+# Wieferich-prime search to 10^14 for 27 bases (extending the bound for six)
 
 Daniel Okwor, Orygn LLC (Houston, TX). Contact: daniel@orygn.tech.
 Computation completed 2026-06-07.
 
 ## Result in one line
 
-For 27 integer bases whose smallest Wieferich prime is unknown, we verified
-that no Wieferich prime exists below 10^14, extending the previously published
-search bound of 4.4 x 10^12 by a factor of about 23.
+For 27 integer bases whose smallest Wieferich prime is unknown, we verified that
+no Wieferich prime exists below 10^14. For six of those bases (311, 454, 554,
+662, 772, 983) this extends the best prior published bound, R. Fischer's
+6.46 x 10^13; the other 21 were already searched further by Fischer (to
+2.00 x 10^14) and are independently confirmed here.
 
 ## Background
 
@@ -18,8 +20,10 @@ of Fermat's little theorem (which guarantees only that p divides b^(p-1) - 1).
 OEIS sequence A039951 records a(n) = the smallest prime p such that p^2 divides
 n^(p-1) - 1. The value a(n) is known for many n, but is unknown for a set of
 bases listed in the entry's comments (source: Richard Fischer). For two of those
-bases (47 and 72) Fischer individually searched past 1.4 x 10^14. The remaining
-bases sat at his broad-sweep bound of 4.4 x 10^12.
+bases (47 and 72) Fischer individually searched past 1.4 x 10^14. The other open
+bases appear at 4.4 x 10^12 in his broad sweep, but his detailed per-base table
+(dated 2025-09-01) already carries them to 2.00 x 10^14 (bases whose largest
+prime factor is at most 149) or 6.46 x 10^13 (the rest).
 
 This work extends the search to 10^14 for 27 of those open bases:
 
@@ -86,9 +90,10 @@ required the GPU).
 ## Honest limitations
 
 - This is a search bound, not a discovery. No new Wieferich prime was found.
-- The lower part of the combined bound (below 4.4 x 10^12) rests on Richard
-  Fischer's prior published search; our contribution is the extension from
-  4.4 x 10^12 to 10^14.
+- The genuine new ground is for six bases (311, 454, 554, 662, 772, 983), where
+  Fischer's detailed table stood at 6.46 x 10^13 and this search reaches 10^14.
+  For the other 21 bases that table was already at 2.00 x 10^14, so this run
+  confirms rather than extends.
 - The result says nothing about whether a Wieferich prime exists for these bases
   above 10^14; the heuristic density (about 1/p per base) suggests examples
   should exist eventually, but none appear in the range searched.

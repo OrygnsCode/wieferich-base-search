@@ -2,7 +2,12 @@
 
 A search for Wieferich primes in 27 bases whose smallest example was unknown, run
 on a single workstation GPU. No Wieferich prime exists below 10^14 for any of
-these bases, which extends the previously published bound of 4.4 x 10^12.
+these 27 bases.
+
+Six of them (311, 454, 554, 662, 772, 983) extend the best previously published
+bound: Richard Fischer's detailed table had these at 6.46 x 10^13. The other 21
+bases were already carried further by Fischer (to 2.00 x 10^14 in that table), so
+for those this run independently confirms his result rather than extending it.
 
 This relates to OEIS [A039951](https://oeis.org/A039951), "smallest prime p such
 that p^2 divides n^(p-1) - 1."
@@ -21,8 +26,10 @@ b^(p-1) congruent to 1 (mod p^2). 3,048,213,614,544 primes were tested. None
 satisfied the condition for any of the 27 bases, so the smallest Wieferich prime
 for each (if one exists) is greater than 10^14.
 
-The 4.4 x 10^12 lower bound is Richard Fischer's prior search; this work extends
-it to 10^14.
+The lower end of this interval, 4.4 x 10^12, is Fischer's broad-sweep figure. For
+the six bases above his detailed table reached 6.46 x 10^13, so the new ground
+gained here is from 6.46 x 10^13 to 10^14; for the other 21 bases his table was
+already at 2.00 x 10^14, beyond this search.
 
 ## How it works
 
